@@ -13,8 +13,17 @@ This is a multi-page website project that captures the beauty of a girl's daily 
 - CSS
 - A lot of creativity ✨
 
-## 📸 Screenshots
-_Add your website screenshots here later._
+## 📸 Screenshots!
+
+![Screenshot 7](https://github.com/user-attachments/assets/1eb1ef48-c338-4cfe-99ee-6318c7ae48db)
+![Screenshot 6](https://github.com/user-attachments/assets/7a45e952-6f90-4b11-a0b7-45c6e9f171ec)
+![Screenshot 5](https://github.com/user-attachments/assets/82146cb8-81b2-4971-a521-879f9b244c1b)
+![Screenshot 4](https://github.com/user-attachments/assets/ef769627-d518-4a64-bcfd-27dbba370f9d)
+![Screenshot 3](https://github.com/user-attachments/assets/07949ce2-996f-4b7d-ba4e-b39a8c8ee841)
+![Screenshot 2](https://github.com/user-attachments/assets/74351bff-fefb-4561-bf19-766d592da014)
+![Screenshot 1](https://github.com/user-attachments/assets/553fa4cf-8da9-456c-8ba8-d06a08b46319)
+![Screenshot 8](https://github.com/user-attachments/assets/8e0464c6-e0d3-4cc7-bfe2-0ca1efbdd83f)
+
 
 ## 📂 How to Use
 1. Clone the repo  
