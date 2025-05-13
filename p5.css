@@ -1,0 +1,111 @@
+/* General Styling */
+body {
+  font-family: Georgia, serif;
+    padding-top: 10px; /* Optional spacing */
+  
+  background-image: url('v3.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #333;
+  font-size: 19px;
+  line-height: 1.9;
+}
+
+h1 {
+  font-size: 35px;
+  color: #000000;
+  font-weight: bold;
+}
+
+/* Sidebar Styling */
+
+
+.nav-button {
+  background: transparent;
+  color: #fff;
+  border: none;
+  font-size: 20px;
+  padding: 20px;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.3s;
+}
+
+.nav-button:hover {
+  background: rgba(255, 140, 0, 0.6);
+}
+
+
+.content {
+  margin-left: 40px;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 800px;
+  margin-top: 0; 
+}
+
+blockquote {
+  border-left: 4px solid #c0a080;
+  margin: 20px 0;
+  padding-left: 20px;
+  font-style: italic;
+  color: #555;
+  background-color: #fff7f0;
+}
+
+.button-container {
+  position: fixed;
+  bottom: 30px;
+  right: 40px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 30px;
+}
+
+.btn {
+  padding: 12px 24px;
+  font-size: 17px;
+  border: none;
+  border-radius: 10px;
+  background: rgba(3, 27, 54, 0.4);
+  color: #0f0f0f;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: rgba(255, 140, 0, 0.6);
+  transform: scale(1.05) translateY(-4px);
+  box-shadow: 6px 6px 15px #cba579, -6px -6px 15px #fff2e1;
+}
+
+
+.audio-player {
+  position: fixed;
+  top: 20px;
+  right: 40px;
+  text-align: left;
+  background-color: rgba(240, 216, 109, 0.5); 
+  padding: 10px;
+  border-radius: 10px;
+  width: fit-content;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px); /* for Safari */
+}
+
+
+.audio-player p {
+  font-size: 16px;
+  color: #da6111;
+  margin: 0 0 5px 0;
+}
+
+
+.audio-player audio {
+  width: 260px;
+  height: 23px;
+}

@@ -1,0 +1,87 @@
+body {
+  font-family: 'Georgia', serif;
+  background-color: #f0f8ff;
+  color: #301904;
+  margin: 0;
+  padding: 40px;
+  line-height: 1.8;
+  
+  background-image: url('UmbrellaGirl.png');
+  background-size: cover;      
+  background-repeat: no-repeat;        
+  background-position: center center; 
+  background-attachment: fixed;        
+}
+
+.diary {
+  max-width: 700px;
+  margin-left: 0;
+  padding: 10px;
+  margin-top: -95px; /* moves the diary content up */
+  line-height: 1.8;
+  font-size: 1.3rem; 
+}
+
+h1 {
+  text-align: left;
+  color: #000000;
+  margin-bottom: 20px;
+  margin-top: -20px; /* moves heading up */
+}
+
+.quote {
+  margin-top: 40px;
+  font-weight: bold;
+  text-align: left;
+  color: #555;
+  font-style: italic;
+}
+
+.buttons {
+  margin-top: 30px;
+}
+
+button {
+  background-color: #523826;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #dd8a3d;
+}
+
+.audio-player p {
+  margin: 0 0 4px 0;
+  font-size: 14px;
+  color: #000000;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.audio-player {
+  text-align: center;
+  background-color: rgba(181, 151, 123, 0.5); /* light brown with transparency */
+  padding: 10px;
+  border-radius: 10px;
+  width: fit-content;
+  margin: 20px auto;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(2px);
+  position: relative;
+  left: 140px; 
+    margin: -10px auto 20px auto; /* shifted up slightly */
+  position: relative;
+
+  
+}
+
+/* Small and neat audio control */
+.audio-player audio {
+  width: 200px;
+  height: 23px;
+}

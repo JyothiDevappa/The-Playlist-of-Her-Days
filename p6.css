@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  padding: 30px;
+  font-family: 'Georgia', serif;
+  min-height: 100vh;
+  background: url('water.png') no-repeat center center fixed;
+  background-size: cover;
+  color: #0c0c0c; /* Light text for dark background */
+}
+
+.content-section {
+  margin-top: -10px; /* Moves title and paragraph upward */
+}
+
+
+/* Title styling */
+.title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-top: -50px; /* Move up */
+  margin-bottom: 20px;
+  left: -110px; /* Move title to the left */
+  position: relative;
+  color: #e66a06;
+
+}
+
+.novel {
+  margin-top: 0px; /* Move the novel paragraph up slightly */
+}
+
+
+/* Story text styling */
+.novel {
+  max-width: 930px;
+  margin-left: auto;
+  text-align: left;
+  line-height: 2;
+  font-size: 18px; /* 👈 Text size added */
+  padding: 30px;
+  border-radius: 10px;
+}
+
+
+.audio-player {
+  position: absolute;
+  top: 20px;             /* closer to the top */
+  right: 20px;            /* closer to the left */
+
+  text-align: left;
+  background-color: rgba(206, 225, 233, 0.6); /* sky blue with transparency */
+  padding: 3px;
+  border-radius: 6px;
+  width: fit-content;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.15);
+
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+.audio-player p {
+  font-size: 17px;
+  color: #000000;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.audio-player audio {
+  width: 200px;
+  height: 20px;
+}
+
+.button {
+  position: fixed;
+  bottom: 30px;
+  left: 40px; /* moved to left */
+  display: flex;
+  justify-content: flex-start;
+  gap: 50px; /* space between buttons */
+}
+
+.button button {
+  padding: 10px 14px;
+  font-size: 15px;
+  border: none;
+  border-radius: 10px;
+  background: rgba(3, 27, 54, 0.4);
+  color: #f1f0ef;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button button:hover {
+  background: rgba(255, 140, 0, 0.6);
+  transform: scale(1.05) translateY(-4px);
+  box-shadow: 6px 6px 15px #cba579, -6px -6px 15px #fff2e1;
+}
