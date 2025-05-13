@@ -1,4 +1,4 @@
-﻿# The Playlist of Her Days
+
  # The Playlist of Her Days 🎵
 
 This is a multi-page website project that captures the beauty of a girl's daily life — from her peaceful mornings to cozy rainy evenings. It's a creative combination of storytelling, design, and mood-based themes.
