@@ -20,10 +20,13 @@ This is a multi-page website project that captures the beauty of a girl's daily 
 ![Screenshot 4](https://github.com/user-attachments/assets/ef769627-d518-4a64-bcfd-27dbba370f9d)
 ![Screenshot 5](https://github.com/user-attachments/assets/82146cb8-81b2-4971-a521-879f9b244c1b)
 ![Screenshot 6](https://github.com/user-attachments/assets/7a45e952-6f90-4b11-a0b7-45c6e9f171ec)
-
 ![Screenshot 7](https://github.com/user-attachments/assets/1eb1ef48-c338-4cfe-99ee-6318c7ae48db)
-
 ![Screenshot 8](https://github.com/user-attachments/assets/8e0464c6-e0d3-4cc7-bfe2-0ca1efbdd83f)
+
+![Screenshot 9](https://github.com/user-attachments/assets/7c0da9b8-d89c-4bf9-bfca-5c9795f7fb40)
+![Screenshot 10](https://github.com/user-attachments/assets/6e9a0b67-050a-4f04-8608-f25b81f86ecb)
+
+
 
 
 ## 📂 How to Use
