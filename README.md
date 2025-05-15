@@ -32,7 +32,7 @@ This is a multi-page website project that captures the beauty of a girl's daily 
 ## 📂 How to Use
 1. Clone the repo  
    `git clone https://github.com/JyothiDevappa/The-Playlist-of-Her-Days.git`
-2. Open login.html in your browser.
+2. Open index.html in your browser.
 
 ---
 
