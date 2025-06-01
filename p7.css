@@ -71,8 +71,8 @@ blockquote {
 
 .audio-player {
   position: fixed;
-  top: 130px;           /* distance from top of the page */
-  left: 250px;          /* distance from left of the page */
+  top: 160px;           /* distance from top of the page */
+  left: 230px;          /* distance from left of the page */
   
   text-align: left;
   background-color: rgba(101, 145, 105, 0.5);
