@@ -82,34 +82,58 @@ button:hover {
   color: #ff4081;
 }
 
-/* PURE MOBILE ONLY – max-width 480px */
-@media screen and (max-width: 480px) {
+
+
+
+@media (max-width: 480px) {
   body {
-    padding-top: 300px; /* move entire content lower on phones */
+    padding-top: 100px;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+    text-align: center;
   }
 
   h1 {
-    font-size: 40px;
-    padding-bottom: 10%;
+    font-size: 38px;
+    padding-bottom: 20px;
   }
 
   .by {
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 20px;
   }
 
   button {
-    padding: 12px 24px;
-    font-size: 20px;
+    font-size: 16px;
+    padding: 10px 24px;
   }
 
   .icon-bar {
-    top: 10px;
-    right: 10px;
+    position: fixed;
+    bottom: 20px;
+    top: auto;
+    right: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
   }
 
   .icon-bar a {
-    font-size: 24px;
-    margin-left: 10px;
+    font-size: 22px;
+    margin: 0 10px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+
+  .login-container {
+    width: 90%;
+    max-width: 400px;
+    margin: auto;
   }
 }
