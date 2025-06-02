@@ -6,29 +6,29 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: url("Purple.png") no-repeat center center fixed;
+  background: url("Purple.png") no-repeat center center;
   background-size: cover;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  padding-top: 190px; /* default desktop position */
+  align-items: center;
   text-align: center;
+  flex-direction: column;
+  padding: 40px 20px;
 }
 
 .login-container {
   width: 100%;
+  max-width: 500px;
 }
 
 h1 {
   font-family: 'Dancing Script', cursive;
-  font-size: 70px;
+  font-size: 60px;
   color: #4b3b5c;
   letter-spacing: 2px;
   margin-bottom: 10px;
   animation: float 3s ease-in-out infinite;
-  position: relative;
-  padding-bottom: 5%;
 }
 
 .by {
@@ -82,40 +82,20 @@ button:hover {
   color: #ff4081;
 }
 
-
-
+/* MOBILE FIX */
 @media (max-width: 480px) {
-  html, body {
-    height: 100vh;
-    overflow: hidden; /* prevent scroll/swipe */
-    padding: 0;
-    margin: 0;
-  }
-
   body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    padding: 60px 20px;
     align-items: center;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    text-align: center;
-  }
-
-  .login-container {
-    width: 90%;
-    max-width: 360px;
+    justify-content: center;
   }
 
   h1 {
     font-size: 36px;
-    padding-bottom: 10px;
   }
 
   .by {
     font-size: 16px;
-    margin-bottom: 20px;
   }
 
   button {
@@ -123,18 +103,7 @@ button:hover {
     padding: 10px 24px;
   }
 
-  /* Keep icon-bar at top right exactly as is */
-  .icon-bar {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1000;
-  }
-
-  /* Only increase icon size on mobile */
   .icon-bar a {
-    font-size: 32px;
-    margin-left: 15px;
+    font-size: 28px;
   }
 }
-
