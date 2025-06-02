@@ -84,20 +84,33 @@ button:hover {
 
 
 
-
 @media (max-width: 480px) {
+  html, body {
+    height: 100vh;
+    overflow: hidden; /* prevent scroll/swipe */
+    padding: 0;
+    margin: 0;
+  }
+
   body {
-    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     background-size: cover;
     background-position: center;
-    flex-direction: column;
+    background-attachment: fixed;
     text-align: center;
   }
 
+  .login-container {
+    width: 90%;
+    max-width: 360px;
+  }
+
   h1 {
-    font-size: 38px;
-    padding-bottom: 20px;
+    font-size: 36px;
+    padding-bottom: 10px;
   }
 
   .by {
@@ -110,30 +123,18 @@ button:hover {
     padding: 10px 24px;
   }
 
+  /* Keep icon-bar at top right exactly as is */
   .icon-bar {
     position: fixed;
-    bottom: 20px;
-    top: auto;
-    right: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 25px;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
   }
 
+  /* Only increase icon size on mobile */
   .icon-bar a {
-    font-size: 22px;
-    margin: 0 10px;
-    background: #fff;
-    padding: 10px;
-    border-radius: 50%;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  }
-
-  .login-container {
-    width: 90%;
-    max-width: 400px;
-    margin: auto;
+    font-size: 32px;
+    margin-left: 15px;
   }
 }
+
