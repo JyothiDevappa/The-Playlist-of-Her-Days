@@ -2,10 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>A Rainy Evening</title>
   <link rel="stylesheet" href="p3-1.css">
 </head>
 <body>
+
+<video autoplay muted loop id="bg-video">
+  <source src="rainy.mp4" type="video/mp4" />
+</video>
+
+
+<div class="mini-audio-player">
+  <button id="playPauseBtn">▶️</button>
+  <audio id="audio" src="rain.mp3"></audio>
+</div>
+
+
 
     <div class="audio-player">
       <p>🎵 Play while reading</p>
@@ -35,5 +49,28 @@
       <button onclick="location.href='t4.html'">Next Page</button>
     </div>
   </div>
+
+
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const video = document.getElementById('bg-video');
+    video.onerror = () => alert("Video not found or failed to load!");
+  });
+</script>
+
+<script>
+  const audio = document.getElementById("audio");
+  const btn = document.getElementById("playPauseBtn");
+
+  btn.addEventListener("click", () => {
+    if (audio.paused) {
+      audio.play();
+      btn.textContent = "⏸️";
+    } else {
+      audio.pause();
+      btn.textContent = "▶️";
+    }
+  });
+</script>
 </body>
 </html>

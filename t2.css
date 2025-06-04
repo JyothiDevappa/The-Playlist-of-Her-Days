@@ -88,3 +88,63 @@ body {
 .icon-bar a:hover {
   color: #ff4081;
 }
+
+
+/* Hide video on desktop */
+.mobile-bg-video {
+  display: none;
+}
+
+/* Mobile-only full-screen background video */
+@media screen and (max-width: 768px) {
+  .mobile-bg-video {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  body {
+    background-image: none; /* remove background image on mobile when video is active */
+  }
+
+  .container {
+    padding-left: 0;
+  }
+.head h1 {
+  font-size: 40px;
+  padding-left: 0;
+  margin-right: 0;
+  color: #ffe0b2;
+  margin-top: 30%; /* 👈 Pushes h1 down */
+  position: relative;
+  left: -15px;
+}
+
+.quote {
+  font-size: 20px;
+  position: relative;
+  margin-top: 40px; /* 👈 Pushes quote down */
+   position: relative;
+  left: -15px;
+}
+
+
+  .nav-links {
+    flex-direction: column;
+    gap: 20px;
+    margin: 40px auto;
+    align-items: center;
+  }
+
+  .nav-links a {
+    width: 40%;
+    text-align: center;
+    font-size: small;
+    
+  }
+}

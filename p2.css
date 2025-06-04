@@ -94,3 +94,97 @@ h1 {
 .story-text {
   margin-top: -60px; /* adjust as needed */
 }
+
+
+
+/* Mini Audio Player for Mobile */
+.mini-audio-player {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    background-image: url('tea.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content {
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    overflow-y: auto;
+    padding: 80px 20px 100px 20px; /* Top (space for heading), Bottom (space for mini-player) */
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+
+  .content::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* Hide scrollbar */
+  }
+
+  .content p {
+    font-size: 16px;
+    line-height: 1.6;
+    padding-left: 5px;
+    margin-bottom: 15px;
+
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    color: #6d4509;
+  }
+
+  .story-text {
+    margin-top: -80px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+  }
+
+  .buttons a {
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    padding: 10px 0;
+  }
+
+  .audio-player {
+    display: none; /* Hide big player on mobile */
+  }
+
+  .mini-audio-player {
+    display: block;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    backdrop-filter: blur(4px);
+    border-radius: 50%;
+    padding: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  #playPauseBtn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+}

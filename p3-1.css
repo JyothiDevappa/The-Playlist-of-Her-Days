@@ -5,28 +5,27 @@ body {
   margin: 0;
   padding: 40px;
   line-height: 1.8;
-  
   background-image: url('UmbrellaGirl.png');
-  background-size: cover;      
-  background-repeat: no-repeat;        
-  background-position: center center; 
-  background-attachment: fixed;        
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
 }
 
 .diary {
   max-width: 700px;
   margin-left: 0;
   padding: 10px;
-  margin-top: -95px; /* moves the diary content up */
+  margin-top: -95px;
+  font-size: 1.3rem;
   line-height: 1.8;
-  font-size: 1.3rem; 
 }
 
 h1 {
   text-align: left;
   color: #000000;
   margin-bottom: 20px;
-  margin-top: -20px; /* moves heading up */
+  margin-top: -20px;
 }
 
 .quote {
@@ -55,16 +54,9 @@ button:hover {
   background-color: #dd8a3d;
 }
 
-.audio-player p {
-  margin: 0 0 4px 0;
-  font-size: 14px;
-  color: #000000;
-  font-family: 'Cormorant Garamond', serif;
-}
-
 .audio-player {
   text-align: center;
-  background-color: rgba(181, 151, 123, 0.5); /* light brown with transparency */
+  background-color: rgba(181, 151, 123, 0.5);
   padding: 10px;
   border-radius: 10px;
   width: fit-content;
@@ -72,16 +64,78 @@ button:hover {
   box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
   backdrop-filter: blur(1px);
   -webkit-backdrop-filter: blur(2px);
-  position: relative;
-  left: 140px; 
-    margin: -10px auto 20px auto; /* shifted up slightly */
-  position: relative;
-
-  
 }
 
-/* Small and neat audio control */
+.audio-player p {
+  margin: 0 0 4px 0;
+  font-size: 14px;
+  color: #000000;
+  font-family: 'Cormorant Garamond', serif;
+}
+
 .audio-player audio {
   width: 200px;
   height: 23px;
+}
+
+/* Hide video by default */
+
+
+
+
+/* By default, hide video and mini player */
+#bg-video,
+.mini-audio-player {
+  display: none;
+}
+
+/* Mobile-specific: show video + mini player */
+@media screen and (max-width: 768px) {
+  body {
+    background-image: none;
+    padding: 20px 10px;
+    text-align: center;
+  }
+
+  #bg-video {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  .diary {
+    margin-top: 20px;
+    padding: 10px;
+  }
+
+  .audio-player {
+    display: none; /* Hide big player */
+  }
+
+  .mini-audio-player {
+    display: block;
+    position: fixed;
+    bottom: 10px;
+    right: 0px;
+    z-index: 999;
+    border-radius: 70%;
+    padding: 5px;
+  }
+
+  #playPauseBtn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+  }
+  .quote {
+    color: #ffe9d4;
+    text-align: center;
+}
 }

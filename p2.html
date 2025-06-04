@@ -10,7 +10,11 @@
 </head>
 <body>
 
-  
+  <div class="mini-audio-player">
+  <button id="playPauseBtn">▶️</button>
+  <audio id="audio" src="senorita.mp3"></audio>
+</div>
+
   
   <div class="content">
   
@@ -87,6 +91,22 @@
     </div>
   </div>
   
+
+  <script>
+  const audio = document.getElementById("audio");
+  const btn = document.getElementById("playPauseBtn");
+
+  btn.addEventListener("click", () => {
+    if (audio.paused) {
+      audio.play();
+      btn.textContent = "⏸️";
+    } else {
+      audio.pause();
+      btn.textContent = "▶️";
+    }
+  });
+</script>
+
 
 </body>
 </html>

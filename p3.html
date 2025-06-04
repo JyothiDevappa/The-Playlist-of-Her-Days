@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>A Rainy Day with Heidi and Maggi</title>
- 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-   <style>
+  <style>
     body {
       font-family: 'Segoe UI', sans-serif;
       background-color: #cabdbd;
@@ -17,8 +17,7 @@
       background-size: cover;
       background-attachment: fixed;
       margin: 0;
-        font-size: 18px; /* base text size */
-
+      font-size: 18px;
     }
 
     h1 {
@@ -31,12 +30,10 @@
     .content {
       width: 60%;
       padding: 20px;
-      background-color: rgba(245, 239, 245, 0.8); /* semi-transparent background for readability */
+      background-color: rgba(245, 239, 245, 0.8);
       box-shadow: 0 0 10px rgba(0,0,0,0.2);
-        margin-top: 0px; /* Push content slightly down to avoid overlap */
-
+      margin-top: 0px;
     }
-
 
     p {
       margin-bottom: 15px;
@@ -60,58 +57,125 @@
     }
 
     .buttons {
-  margin-top: 30px;
+      margin-top: 30px;
+    }
+
+    button {
+      background-color: #523826;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin-right: 10px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #dd8a3d;
+    }
+
+    .audio-player p {
+      margin: 0 0 4px 0;
+      font-size: 14px;
+      color: #000000;
+      font-family: 'Cormorant Garamond', serif;
+    }
+
+    .audio-player {
+      position: fixed;
+      top: 36px;
+      left: 73%;
+      transform: translateX(-50%);
+      text-align: center;
+      background-color: rgba(181, 151, 123, 0.6); 
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+      backdrop-filter: blur(3px);
+      z-index: 1000;
+    }
+
+    .audio-player audio {
+      width: 180px;
+      height: 23px;
+    }
+
+    #bg-video,
+.mini-audio-player {
+  display: none;
 }
+    /* ----------- Responsive CSS ----------- */
+    @media (max-width: 768px) {
+      body {
+        padding: 20px;
+        font-size: 16px;
+      }
 
-button {
-  background-color: #523826;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  margin-right: 10px;
-  border-radius: 6px;
-  cursor: pointer;
-}
+      .content {
+        width: 100%;
+        padding: 15px;
+        box-sizing: border-box;
+      }
 
-button:hover {
-  background-color: #dd8a3d;
-}
+      h1 {
+        font-size: 24px;
+      }
 
-.audio-player p {
-  margin: 0 0 4px 0;
-  font-size: 14px;
-  color: #000000;
-  font-family: 'Cormorant Garamond', serif;
-}
+      .audio-player {
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        padding: 8px;
+      }
 
+      .audio-player audio {
+        width: 100%;
+      }
 
-.audio-player {
-  position: fixed;
-  top: 36px;
-  left: 73%;
-  transform: translateX(-50%);
-  text-align: center;
-  background-color: rgba(181, 151, 123, 0.6); 
-  padding: 10px;
-  border-radius: 10px;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
-  backdrop-filter: blur(3px);
-  z-index: 1000;
-}
+      button {
+        width: 100%;
+        margin-top: 10px;
+      }
 
-/* Small and neat audio control */
-.audio-player audio {
-  width: 180px;
-  height: 23px;
-}
+      .buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+      }
 
+      
+  .audio-player {
+    display: none; /* Hide big player */
+  }
 
+  .mini-audio-player {
+    display: block;
+    position: fixed;
+    bottom: 10px;
+    right: 0px;
+    z-index: 999;
+    border-radius: 70%;
+    padding: 5px;
+  }
 
-
+  #playPauseBtn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+  }
+    }
   </style>
-
 </head>
 <body>
+<div class="mini-audio-player">
+  <button id="playPauseBtn">▶️</button>
+  <audio id="audio" src="rain.mp3"></audio>
+</div>
+
    <div class="audio-player">
       <p>🎵 Play while reading</p>
       <audio controls>
@@ -168,5 +232,20 @@ button:hover {
       <button onclick="location.href='t3.html'">Back Page</button>
       <button onclick="location.href='p3-1.html'">Next Page</button>
     </div>
+
+    <script>
+  const audio = document.getElementById("audio");
+  const btn = document.getElementById("playPauseBtn");
+
+  btn.addEventListener("click", () => {
+    if (audio.paused) {
+      audio.play();
+      btn.textContent = "⏸️";
+    } else {
+      audio.pause();
+      btn.textContent = "▶️";
+    }
+  });
+</script>
 </body>
 </html>

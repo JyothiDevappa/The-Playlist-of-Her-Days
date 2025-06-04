@@ -114,3 +114,82 @@ h1 {
 }
 
 
+@media screen and (max-width: 768px) {
+  body {
+    background-image: url(sunflower.png);
+    background-size: cover;
+    
+    background-position: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  .glass-box {
+    top: 42%;
+    left: 50%;
+    right: auto;
+    transform: translate(-50%, -50%);
+    width: 85vw;
+    max-width: 80%;
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+  }
+
+  .quote {
+    font-size: 1.2rem;
+    top: 0;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .morning-btn {
+    width: 50%;
+    font-size: 1rem;
+    padding: 10px;
+    position: relative;
+    right: -25%;
+  }
+
+  .icon-bar {
+    top: 10px;
+    left: 10px;
+  }
+
+  .icon-bar a {
+    font-size: 20px;
+    margin-left: 10px;
+  }
+}
+/* Hide by default (for laptops/desktops) */
+
+
+/* Hide the video by default */
+.mobile-bg-video {
+  display: none;
+}
+
+/* Show video background on mobile only */
+@media screen and (max-width: 768px) {
+  .mobile-bg-video {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  body {
+    background-image: none; /* remove image when video is active */
+  }
+}

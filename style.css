@@ -84,18 +84,37 @@ button:hover {
 
 /* MOBILE FIX */
 @media (max-width: 480px) {
+  html, body {
+    height: 100vh;
+    overflow: hidden; /* prevent scroll/swipe */
+    padding: 0;
+    margin: 0;
+  }
+
   body {
     padding: 60px 20px;
     align-items: center;
     justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+  }
+
+  .login-container {
+    width: 90%;
+    max-width: 360px;
   }
 
   h1 {
     font-size: 36px;
+    padding-bottom: 10px;
   }
 
   .by {
     font-size: 16px;
+    margin-bottom: 20px;
   }
 
   button {
@@ -103,7 +122,17 @@ button:hover {
     padding: 10px 24px;
   }
 
+  /* Keep icon-bar at top right exactly as is */
+  .icon-bar {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+
+  /* Only increase icon size on mobile */
   .icon-bar a {
     font-size: 28px;
   }
 }
+
